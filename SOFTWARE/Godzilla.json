@@ -1,0 +1,488 @@
+{
+	"name": "Godzilla",
+	"versions": {
+		"attack": "11",
+		"navigator": "4.6.0",
+		"layer": "4.3"
+	},
+	"domain": "enterprise-attack",
+	"description": "Enterprise techniques used by 哥斯拉(Godzilla), ATT&CK software",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"Windows",
+			"Containers"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": true,
+		"countUnscored": false
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1071.001",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉通信过程会POST数据",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.003",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉可以执行cmd命令",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉可以上传文件至目标机器",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉可以查看目标机器目录",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1070",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1070.006",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉可以修改文件的时间戳",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉可以打包下载目标网站文件",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉的portscan插件可以扫描端口",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1505",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1505.003",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉的payload为webshell或内存webshell",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1560",
+			"tactic": "collection",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1560.001",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉可以对目录进行zip压缩解压",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1059.004",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉可以执行shell命令",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1555",
+			"tactic": "credential-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1555.003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉的ShapWeb插件可以读取服务器 谷歌 IE 火狐 浏览器保存的账号密码",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1132",
+			"tactic": "command-and-control",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1132.001",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉webshell可以使用XOR、base64进行编码",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1001",
+			"tactic": "command-and-control",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1213",
+			"tactic": "collection",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1140",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉内置了3种Payload以及6种加密器,6种支持脚本后缀",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1114",
+			"tactic": "collection",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1573",
+			"tactic": "command-and-control",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1573.002",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉通信流量使用 AES 算法加密",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1567",
+			"tactic": "exfiltration",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉内置了BadPotato，SweetPotato提权",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1222",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉可以在文件管理功能修改文件权限",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "credential-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉的SafetyKatz插件可以实现Mimikatz的功能",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1014",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉的ShellcodeLoader插件可以Shellcode加载 与MSF联动",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1113",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉可以进行屏幕截图",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1216",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉会显示目标机器系统基本信息",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉的网络详情插件可以显示网络连接情况",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1007",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉会显示目标机器服务基本信息",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1124",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉会显示目标机器本地时间",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552",
+			"tactic": "credential-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1552.001",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "哥斯拉的lemon插件可以读取服务器 FileZilla navicat sqlyog Winscp xmangager 的配置信息以及密码",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffffff",
+			"#66b1ffff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Godzilla"
+		}
+	],
+	"metadata": [],
+	"links": [
+		{
+			"label": "repo",
+			"url": "https://github.com/BeichenDream/Godzilla"
+		}
+	],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}

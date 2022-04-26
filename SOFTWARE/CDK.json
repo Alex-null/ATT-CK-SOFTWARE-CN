@@ -1,0 +1,446 @@
+{
+	"name": "CDK",
+	"versions": {
+		"attack": "11",
+		"navigator": "4.6.0",
+		"layer": "4.3"
+	},
+	"domain": "enterprise-attack",
+	"description": "",
+	"filters": {
+		"platforms": [
+			"Containers"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以暴力破解镜像源账号",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1609",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "CDK的Tool 模块\n还原部分常用的Linux命令，解决容器环境缩减的问题。包含了渗透过程中常用的linux命令以及与Docker/K8s API交互的命令。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1613",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "CDK的Evaluate 模块内置了网络namespace隔离情况、可用的Capabilities、挂载情况、K8s Api-server信息登容器信息收集",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1610",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以通过daemonset将用户指定的后门镜像部署到每个node。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1610",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以通过daemonset将用户指定的后门镜像部署到每个node。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1611",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "CDK的Exploit 模块包含大量容器逃逸EXP，如自动化逃逸CVE-2020-15257，反弹宿主机的shell到远端服务器。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1190",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以攻击Docker API 2375未授权访问漏洞，控制宿主机的dockerd创建一个新容器，并挂在宿主机根目录/到容器内部/host，然后执行用户输入的指令来篡改宿主机的文件，比如可以写/etc/crontab来搞定宿主机。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以攻击Docker API 2375未授权访问漏洞，控制宿主机的dockerd创建一个新容器，并挂在宿主机根目录/到容器内部/host，然后执行用户输入的指令来篡改宿主机的文件，比如可以写/etc/crontab来搞定宿主机。CDK也可以连接K8s api-server发起自定义HTTP请求。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以攻击Docker API 2375未授权访问漏洞，控制宿主机的dockerd创建一个新容器，并挂在宿主机根目录/到容器内部/host，然后执行用户输入的指令来篡改宿主机的文件，比如可以写/etc/crontab来搞定宿主机。CDK也可以连接K8s api-server发起自定义HTTP请求。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以进行IP/端口扫描",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1069",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "CDK的Exploit 模块包含了获取K8s Pod Security Policies、窃取K8s Secrets等功能",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053.007",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以部署K8s CronJob定时创建用户指定的image并运行cmd",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.007",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以部署K8s CronJob定时创建用户指定的image并运行cmd",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.007",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以部署K8s CronJob定时创建用户指定的image并运行cmd",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552",
+			"tactic": "credential-access",
+			"color": "",
+			"comment": "1",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1552.001",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以扫描用户指定的目录，在其文件中寻找可用的AK/证书/配置文件等敏感信息，常用于攻破容器之后发现其中存在一些代码文件(如python/php)等，可以使用该脚本自动提取代码文件中泄露的AK。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552.007",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以发包到K8s api-server、Docker HTTP API",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1525",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以暴力破解容器镜像源的账号和密码，获取一个可用的账户，用于劫持镜像获取Shell。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1550",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1550.001",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以扫描用户指定的目录，在其文件中寻找可用的AK/证书/配置文件等敏感信息，常用于攻破容器之后发现其中存在一些代码文件(如python/php)等，可以使用该脚本自动提取代码文件中泄露的AK。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1550.001",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以扫描用户指定的目录，在其文件中寻找可用的AK/证书/配置文件等敏感信息，常用于攻破容器之后发现其中存在一些代码文件(如python/php)等，可以使用该脚本自动提取代码文件中泄露的AK。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1612",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以向Docker HTTP API(2375)发起自定义请求。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "CDK的Exploit: ak-leakage可以\n扫描用户指定的目录，在其文件中寻找可用的AK/证书/配置文件等敏感信息，常用于攻破容器之后发现其中存在一些代码文件(如python/php)等，可以使用该脚本自动提取代码文件中泄露的AK。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "CDK的Exploit: ak-leakage可以\n扫描用户指定的目录，在其文件中寻找可用的AK/证书/配置文件等敏感信息，常用于攻破容器之后发现其中存在一些代码文件(如python/php)等，可以使用该脚本自动提取代码文件中泄露的AK。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "CDK的Exploit: ak-leakage可以\n扫描用户指定的目录，在其文件中寻找可用的AK/证书/配置文件等敏感信息，常用于攻破容器之后发现其中存在一些代码文件(如python/php)等，可以使用该脚本自动提取代码文件中泄露的AK。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "CDK的Exploit: ak-leakage可以\n扫描用户指定的目录，在其文件中寻找可用的AK/证书/配置文件等敏感信息，常用于攻破容器之后发现其中存在一些代码文件(如python/php)等，可以使用该脚本自动提取代码文件中泄露的AK。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "K8s集群创建的Pod中，容器内部默认携带K8s Service Account的认证凭据(/run/secrets/kubernetes.io/serviceaccount/token)，CDK将利用该凭据尝试认证K8s api-server服务器并访问高权限接口，如果执行成功意味着该账号拥有高权限，您可以直接利用Service Account管理K8s集群。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "K8s集群创建的Pod中，容器内部默认携带K8s Service Account的认证凭据(/run/secrets/kubernetes.io/serviceaccount/token)，CDK将利用该凭据尝试认证K8s api-server服务器并访问高权限接口，如果执行成功意味着该账号拥有高权限，您可以直接利用Service Account管理K8s集群。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "K8s集群创建的Pod中，容器内部默认携带K8s Service Account的认证凭据(/run/secrets/kubernetes.io/serviceaccount/token)，CDK将利用该凭据尝试认证K8s api-server服务器并访问高权限接口，如果执行成功意味着该账号拥有高权限，您可以直接利用Service Account管理K8s集群。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "K8s集群创建的Pod中，容器内部默认携带K8s Service Account的认证凭据(/run/secrets/kubernetes.io/serviceaccount/token)，CDK将利用该凭据尝试认证K8s api-server服务器并访问高权限接口，如果执行成功意味着该账号拥有高权限，您可以直接利用Service Account管理K8s集群。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "CDK可以绕过K8s RBAC：如果当前的Pod有创建Pod权限，即可利用本EXP进行提权到Cluster Admin。k8s get sa token EXP将创建一个Pod并挂在目标service-account的token，之后在Pod中读取该token并发送到攻击者的公网服务器。",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffffff",
+			"#66b1ffff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by CDK"
+		}
+	],
+	"metadata": [],
+	"links": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}
